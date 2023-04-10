@@ -1,0 +1,113 @@
+.productCard {
+  width: 14vmax;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: rgb(48, 48, 48);
+  margin: 2vmax;
+  transition: all 1s;
+  padding-bottom: 0.5vmax;
+  height: 400px !important;
+  box-shadow: 0 0 5px rgba(15, 15, 15, 0.8);
+  position: relative;
+}
+.productCard:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(
+    45deg,
+    hsl(229, 88%, 16%),
+    hsl(215, 85%, 21%)
+  );
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.productCard:hover:before {
+  opacity: 0.87;
+}
+.productCard h2 {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top: 170px;
+  color: white;
+  font-size: 30px;
+  margin-left: 30px;
+}
+.productCard:hover h2 {
+  opacity: 1;
+}
+
+.productCard > img {
+  width: 14vmax;
+  height: 14vmax;
+  object-fit: fill;
+}
+
+.productCard > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 14vmax !important;
+  margin-top: 10px;
+}
+
+.productCardSpan {
+  margin: 0.5vmax;
+  font: 300 0.4vmax "Roboto";
+}
+
+.productCard > p {
+  font-family: "Roboto";
+  font-size: 1.2vmax;
+  margin: 1vmax 0.5vmax;
+  margin-bottom: 0;
+}
+
+.productCard > span {
+  margin: 0.5vmax;
+  color: tomato;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 1vmax;
+}
+
+.productCard:hover {
+  transform: translateY(-1vmax);
+}
+
+@media screen and (max-width: 400px) {
+  .productCard > p {
+    font-size: 1.7vmax;
+  }
+
+  .productCard > div {
+    /* margin: 0vmax; */
+    /* display: block; */
+    justify-content: space-around;
+    height: 20vmax !important;
+  }
+
+  .productCard > span {
+    font-size: 1.5vmax;
+  }
+
+  .productCard > div > span {
+    margin: 0 0.5vmax;
+    font: 300 1.9vmax "Roboto";
+  }
+  .productCard {
+    height: 250px;
+    width: 80vw;
+  }
+  .productCard > img {
+    width: 100%;
+    height: 40vmax;
+    object-fit: fill;
+  }
+}

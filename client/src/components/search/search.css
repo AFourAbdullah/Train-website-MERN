@@ -1,0 +1,129 @@
+.searchContainer {
+  width: 100%;
+  height: 100vh;
+  background-image: url("../../assets/searchbg.jpg");
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+
+  flex-direction: column;
+  /* background-repeat: no-repeat; */
+  background-size: cover;
+  background-position: bottom;
+  -webkit-clip-path: polygon(
+    11% 0,
+    100% 0,
+    100% 20%,
+    100% 80%,
+    100% 100%,
+    0 100%,
+    0% 80%,
+    0 22%
+  );
+  clip-path: polygon(
+    11% 0,
+    100% 0,
+    100% 20%,
+    100% 80%,
+    100% 100%,
+    0 100%,
+    0% 80%,
+    0 22%
+  );
+}
+.searchContainer input {
+  outline: none;
+  /* border: none; */
+  height: 30px;
+  padding: 20px;
+  width: 200px;
+  border: 2px solid transparent;
+}
+.searchContainer input::placeholder {
+  color: black !important;
+  font-size: 15px !important;
+}
+.inputDiv {
+  display: flex;
+  gap: 30px;
+}
+input:focus {
+  border: 2px solid black;
+}
+.searchBtn {
+  border: none;
+  background-image: linear-gradient(
+    45deg,
+    hsl(229, 88%, 16%),
+    hsl(215, 81%, 30%)
+  );
+  color: white;
+  font: 300 1.4vmax "Roboto";
+  width: 200px;
+  padding: 0.6vmax;
+  cursor: pointer;
+  transition: none !important;
+  border-radius: 4px;
+  outline: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.219);
+  border: 1px solid transparent;
+  animation: none;
+}
+.alertFields {
+  width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-image: linear-gradient(45deg, #f49ad3 23 0%, #700a 100%); */
+  color: white;
+  background-size: 100%;
+  background-color: #0d229a;
+  margin: 0px auto;
+  height: 40px;
+}
+.searchHead {
+  text-decoration: none;
+  background-color: #e6edef;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 80px;
+}
+.searchBtn:hover {
+  background-image: linear-gradient(
+    45deg,
+    hsl(229, 83%, 24%),
+    hsl(215, 87%, 18%)
+  );
+  border-radius: 5px;
+  border: 1px solid white;
+}
+.inputDiv select {
+  width: 260px !important;
+  height: 40px;
+  /* padding: 20px; */
+}
+/* select option {
+  display: block;
+} */
+@media (max-width: 400px) {
+  .inputDiv {
+    flex-direction: column;
+  }
+  .searchContainer input {
+    width: 65vw;
+    padding-left: 0px;
+  }
+  .searchBtn {
+    width: 65vw;
+    height: 40px;
+    font-size: 20px;
+  }
+  .searchHead {
+    font-size: 30px;
+  }
+}

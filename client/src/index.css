@@ -1,0 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Public Sans";
+}
+html {
+  scroll-behavior: smooth;
+  /* scroll-padding-top: 100px; */
+}

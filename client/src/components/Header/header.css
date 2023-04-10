@@ -1,0 +1,8 @@
+.menuBurger {
+  height: 4vmax !important;
+}
+@media (max-width: 400px) {
+  .nav1 {
+    padding-left: 48px;
+  }
+}

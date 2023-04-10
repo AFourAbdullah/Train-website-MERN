@@ -1,0 +1,19 @@
+.Loading {
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  display: grid;
+  place-items: center;
+}
+.Loading > div {
+  width: 10vmax;
+  height: 10vmax;
+  border-bottom: 10px solid grey;
+  border-radius: 50%;
+  animation: rotateLoader linear infinite 800ms;
+}
+@keyframes rotateLoader {
+  to {
+    transform: rotateZ(-360deg);
+  }
+}
