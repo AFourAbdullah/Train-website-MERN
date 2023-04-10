@@ -43,15 +43,15 @@ export const registeUser = (userData) => async (dispatch) => {
         "Content-Type": "multipart/form-data",
         // "Access-Control-Allow-Origin": "*",
       },
-      // credentials: "include",
-      // withCredentials: true,
+      credentials: "include",
+      withCredentials: true,
     };
 
     const { data } = await axios.post("/api/v1/user/new", userData, config);
     dispatch({ type: REGISTER_USER_SUCCESS, payload: data.user });
-    Cookies.set("token", data.token, {
-      expires: new Date(Date.now() + 5 * 24 * 60 * 60 * 1000),
-    });
+    // Cookies.set("token", data.token, {
+    //   expires: new Date(Date.now() + 5 * 24 * 60 * 60 * 1000),
+    // });
   } catch (error) {
     dispatch({
       type: REGISTER_USER_FAIL,
@@ -81,9 +81,9 @@ export const login = (email, password) => async (dispatch) => {
 
     dispatch({ type: LOGIN_SUCCESS, payload: data.user });
 
-    Cookies.set("token", data.token, {
-      expires: new Date(Date.now() + 5 * 24 * 60 * 60 * 1000),
-    });
+    // Cookies.set("token", data.token, {
+    //   expires: new Date(Date.now() + 5 * 24 * 60 * 60 * 1000),
+    // });
   } catch (error) {
     dispatch({
       type: LOGIN_FAIL,
@@ -106,7 +106,7 @@ export const logout = (email, password) => async (dispatch) => {
   try {
     await axios.get("/api/v1/user/logout");
     dispatch({ type: LOGOUT_SUCCESS });
-    Cookies.remove("token");
+    // Cookies.remove("token");
   } catch (error) {
     // dispatch({ type: LOAD_USER_FAIL, payload: error.response.data.message });
     dispatch({ type: LOGOUT_FAIL, payload: error.response.data.message });
