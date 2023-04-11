@@ -44,7 +44,7 @@ export const registeUser = (userData) => async (dispatch) => {
         // "Access-Control-Allow-Origin": "*",
       },
       credentials: "include",
-      withCredentials: true,
+      // withCredentials: true,
     };
 
     const { data } = await axios.post("/api/v1/user/new", userData, config);
@@ -69,7 +69,7 @@ export const login = (email, password) => async (dispatch) => {
         // "Access-Control-Allow-Origin": "*",
       },
       credentials: "include",
-      withCredentials: true,
+      // withCredentials: true,
     };
 
     const { data } = await axios.post(
