@@ -51,7 +51,13 @@ const Trains = () => {
       ) : (
         <div className="trains">
           {filteredtrainsCount === 0 && (
-            <h2 style={{ textAlign: "center", fontSize: "30px" }}>
+            <h2
+              style={{
+                textAlign: "center",
+                fontSize: "30px",
+                marginTop: "100px",
+              }}
+            >
               No Trains Available
             </h2>
           )}
