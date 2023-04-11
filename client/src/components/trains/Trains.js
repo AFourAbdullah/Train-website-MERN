@@ -50,6 +50,11 @@ const Trains = () => {
         <div className="error">{error}</div>
       ) : (
         <div className="trains">
+          {filteredtrainsCount === 0 && (
+            <h2 style={{ textAlign: "center", fontSize: "30px" }}>
+              No Trains Available
+            </h2>
+          )}
           {trains &&
             trains.map((train) => {
               return <TrainCard key={train._id} train={train} />;
